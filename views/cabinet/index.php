@@ -1,0 +1,1 @@
+<h1>Привет <i class="text-danger"><?php echo Session::get('login')?></i></h1>
