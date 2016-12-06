@@ -259,7 +259,7 @@
             <form class="navbar-form navbar-left" action="/item/search/" method="post">
                 <div class="form-group">
                     <input id="auto-search" autocomplete="off" type="text" class="form-control"
-                           placeholder="Поиск по тэгам" name="tag">
+                           placeholder="Поиск по тегам" name="tag">
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">

@@ -5,14 +5,17 @@ class UsersController extends Controller
     public function __construct($data = array())
     {
         parent::__construct($data);
-        $this->model = new User();
+        $this->model = array(
+			'user' => new User(),
+			'ads' => new Ads()
+		);
     }
 
     public function login()
     {
         if ($_POST && isset($_POST['login']) && isset($_POST['password'])) {
 
-            $user = $this->model->getByLogin($_POST['login']);
+            $user = $this->model['user']->getByLogin($_POST['login']);
 
             if ($user && $_POST['password'] == $user['password']) {
 
@@ -29,6 +32,10 @@ class UsersController extends Controller
                 Router::redirect('/cabinet/');
             }
         }
+		
+		$ads = serialize($this->data['ads'] = $this->model['ads']->getAds());
+
+        Session::set('ads', $ads);
     }
 
     public function logout()
@@ -46,7 +53,7 @@ class UsersController extends Controller
 
             if(isset($_POST['password'], $_POST['login'])) {
 
-                if($this->model->register($_POST)) {
+                if($this->model['user']->register($_POST)) {
 
                     header('Location: /users/login/');
 
