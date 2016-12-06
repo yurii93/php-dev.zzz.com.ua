@@ -21,7 +21,7 @@
 
     <div class="form-group">
         <label for="content">Содержимое</label>
-        <textarea id="comment" name="comment" class="form-control" required></textarea>
+        <textarea id="content" name="content" class="form-control" required></textarea>
     </div>
 
     <div class="form-group">
