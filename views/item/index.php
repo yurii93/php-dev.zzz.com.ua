@@ -171,7 +171,7 @@
             <label for="comment">Комментарий</label>
             <input type="text" id="comment" name="comment" value="" class="form-control" required>
         </div>
-        <input type="submit" class="btn btn-success">
+        <input type="submit" class="btn btn-success" value="Отправить">
     </form>
 	<br>
 <?php endif; ?>
