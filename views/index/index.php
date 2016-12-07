@@ -99,9 +99,13 @@ foreach ($data['categories'] as $category) {
     </div>
     <div class="col-md-6">
 <h3>Наиболее обсуждаемые темы <br> (за сегодня):</h3>
+<?php if($data['top_news']) :?>
 <?php foreach($data['top_news'] as $news) : ?>
     <a href="/item/index/<?php echo $news['id'] ?>"><p><b><?php echo $news['title'] ?></b> <span class="badge"><?php echo $news['quantity'] ?></span></p></a>
 <?php endforeach; ?>
+<?php else: ?>
+<b style="color: chocolate;">Сегодня обсуждений не было</b>
+<?php endif; ?>
     </div>
 </div>
 
