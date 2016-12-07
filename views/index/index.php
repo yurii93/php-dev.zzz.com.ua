@@ -98,7 +98,7 @@ foreach ($data['categories'] as $category) {
 <?php endforeach; ?>
     </div>
     <div class="col-md-6">
-<h3>Наиболее обсуждаемые темы:</h3>
+<h3>Наиболее обсуждаемые темы <br> (за сегодня):</h3>
 <?php foreach($data['top_news'] as $news) : ?>
     <a href="/item/index/<?php echo $news['id'] ?>"><p><b><?php echo $news['title'] ?></b> <span class="badge"><?php echo $news['quantity'] ?></span></p></a>
 <?php endforeach; ?>
