@@ -441,7 +441,7 @@
             setTimeout("$('#message').show('slideDown');", 7000);
             $(".close-message").click(function () {
             });
-            document.cookie = "message=ok";
+            document.cookie = "message=ok; path=/;";
         });
     }
 
